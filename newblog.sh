@@ -3,9 +3,9 @@ set -l BLOG_TAGS_PATH ~/study/BlogSite/Wang98/tags/
 set -l BLOG_POST_PATH ~/study/BlogSite/Wang98/_posts/
 if test -d $BLOG_POST_PATH
 	set -l CURR_DATE (date +"%Y-%m-%d")
-	read -l -P "Please give a title for your new Blog (maximal length 15):" TITLENAME
+	read -l -P "Please give a title for your new Blog (maximal length 30):" TITLENAME
 	read -l -P "In what category falls this post:" TAGS_NAME
-	if test (string length $TITLENAME) -le 15
+	if test (string length $TITLENAME) -le 30
 		set -l BLOG_NAME (string join '' $BLOG_POST_PATH $CURR_DATE '-' $TITLENAME ".md")
 		
 		if test -e $BLOG_NAME 
