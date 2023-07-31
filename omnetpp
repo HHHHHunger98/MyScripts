@@ -1,0 +1,4 @@
+#!/usr/bin/fish
+
+cd ~/Applications/omnetpp-6.0.1/bin/
+./omnetpp
